@@ -308,16 +308,17 @@ function initGiftBox() {
 
   function openGift() {
     openBtn.disabled = true;
-    openBtn.textContent = 'Opening... 💜';
-    giftBox.style.animation = 'none';
-    giftBox.style.transition = 'transform 0.1s ease';
+    openBtn.innerHTML = 'Opening... 💜';
+
+    // Shake the whole scene
     let count = 0;
-    const dirs = [-8,8,-6,6,-4,4,0];
+    const dirs = [-6,6,-5,5,-3,3,0];
     const shake = setInterval(() => {
-      giftBox.style.transform = `rotate(${dirs[count % dirs.length]}deg) scale(1.05)`;
+      giftBox.style.transform = `rotate(${dirs[count % dirs.length]}deg)`;
       count++;
       if (count >= 10) {
         clearInterval(shake);
+        giftBox.style.transform = '';
         giftBox.classList.add('opened');
         spawnGiftSparkles();
         setTimeout(() => { launchConfetti(); setTimeout(launchFireworks, 500); }, 400);
@@ -339,7 +340,6 @@ function initGiftBox() {
     replayBtn.addEventListener('click', () => {
       giftBox.classList.remove('opened');
       giftBox.style.transform = '';
-      giftBox.style.animation = '';
       if (giftArea) giftArea.style.opacity = '1';
       if (giftReveal) giftReveal.classList.remove('show');
       openBtn.disabled = false;
