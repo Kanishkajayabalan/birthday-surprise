@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Surprise ♡ | Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- AMBIENT LAYERS -->
+  <div class="nebula-layer" aria-hidden="true">
+    <div class="nebula nb1"></div><div class="nebula nb2"></div>
+    <div class="nebula nb3"></div><div class="nebula nb4"></div>
+    <div class="nebula nb5"></div>
+  </div>
+  <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+  <div class="bg-particles" id="bgParticles"></div>
+  <div class="stars-layer"  id="starsLayer"></div>
+
+  <!-- MUSIC -->
+  <div class="music-control" id="musicControl" title="Toggle Music">
+    <i class="fas fa-music" id="musicIcon"></i>
+    <span id="musicLabel">Music</span>
+    <audio id="bgMusic" loop>
+      <source src="assets/music/birthday.mp3" type="audio/mpeg"/>
+    </audio>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a class="nav-brand" href="index.html">
+      <span class="nav-gift-icon">🎁</span>
+      <span class="nav-title">Birthday Surprise <span class="heart">♡</span></span>
+    </a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="about.html"    class="nav-link">About You</a></li>
+      <li><a href="memories.html" class="nav-link">Memories</a></li>
+      <li><a href="wishes.html"   class="nav-link">Wishes</a></li>
+      <li><a href="surprise.html" class="nav-link surprise-btn active">Surprise <span class="heart">♡</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- SURPRISE SECTION -->
+  <section class="section surprise-section">
+    <div class="confetti-container"  id="confettiContainer"></div>
+    <div class="fireworks-container" id="fireworksContainer"></div>
+    <div class="floating-hearts-container" id="floatingHearts"></div>
+
+    <div class="section-header">
+      <p class="section-eyebrow">🎁 Something Special 🎁</p>
+      <h2 class="section-title">Your Special Surprise <span class="heart">♡</span></h2>
+      <div class="title-divider"><span>🌸</span><span>🌸</span><span>🌸</span></div>
+    </div>
+
+    <div class="surprise-content">
+
+      <div class="gift-area" id="giftArea">
+        <div class="gift-box" id="giftBox">
+          <div class="gift-lid" id="giftLid">
+            <div class="gift-lid-body"></div>
+            <div class="gift-bow">
+              <div class="bow-left"></div>
+              <div class="bow-right"></div>
+              <div class="bow-center"></div>
+            </div>
+          </div>
+          <div class="gift-base">
+            <div class="gift-ribbon-v"></div>
+          </div>
+          <div class="gift-sparkle gs1">✦</div>
+          <div class="gift-sparkle gs2">★</div>
+          <div class="gift-sparkle gs3">✦</div>
+          <div class="gift-sparkle gs4">✶</div>
+        </div>
+
+        <button class="open-gift-btn" id="openGiftBtn">
+          <span>Open Your Gift</span> 🎁
+        </button>
+      </div>
+
+      <div class="gift-reveal" id="giftReveal">
+        <div class="reveal-card glass-card">
+          <div class="reveal-top">🎉 ✨ 🎊</div>
+          <h3 class="reveal-title">From My Heart to Yours!</h3>
+          <div class="reveal-hearts">
+            <span class="rh rh1">💜</span>
+            <span class="rh rh2">💜</span>
+            <span class="rh rh3">💜</span>
+            <span class="rh rh4">💜</span>
+            <span class="rh rh5">💜</span>
+          </div>
+          <p class="reveal-message">
+            This isn't just a website — it's a piece of my heart, crafted especially for
+            you. Every word, every colour, every star on this page was placed there with
+            love, thinking of you, your smile, and how much joy you bring to my life.
+          </p>
+          <p class="reveal-message">
+            Your gift is simply this: knowing that someone in this world loves you
+            unconditionally, is endlessly proud of you, and wishes you nothing but
+            the most beautiful, most magical life. 🌸
+          </p>
+          <p class="reveal-closing">
+            I love you to the moon and back,<br/>
+            <strong>forever and always. 💜</strong>
+          </p>
+          <div class="reveal-flowers">🌸 🌺 🌸 🌺 🌸</div>
+          <button class="replay-btn" id="replayBtn">🎊 Celebrate Again!</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page nav -->
+    <div class="page-nav">
+      <a href="wishes.html" class="page-nav-btn">← Wishes</a>
+      <a href="index.html"  class="page-nav-btn">🏠 Home</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-deco"><span>🌸</span><span>💜</span><span>✨</span><span>💜</span><span>🌸</span></div>
+    <p class="footer-line1">Thank you for being in my life...</p>
+    <p class="footer-line2">Stay happy, keep smiling and always shine! <span class="heart">♡</span></p>
+    <p class="footer-credit">Made with 💜 for the most wonderful sister in the world</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

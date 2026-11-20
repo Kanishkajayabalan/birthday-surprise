@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About You ♡ | Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- AMBIENT LAYERS -->
+  <div class="nebula-layer" aria-hidden="true">
+    <div class="nebula nb1"></div><div class="nebula nb2"></div>
+    <div class="nebula nb3"></div><div class="nebula nb4"></div>
+    <div class="nebula nb5"></div>
+  </div>
+  <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+  <div class="bg-particles" id="bgParticles"></div>
+  <div class="stars-layer"  id="starsLayer"></div>
+
+  <!-- MUSIC -->
+  <div class="music-control" id="musicControl" title="Toggle Music">
+    <i class="fas fa-music" id="musicIcon"></i>
+    <span id="musicLabel">Music</span>
+    <audio id="bgMusic" loop>
+      <source src="assets/music/birthday.mp3" type="audio/mpeg"/>
+    </audio>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a class="nav-brand" href="index.html">
+      <span class="nav-gift-icon">🎁</span>
+      <span class="nav-title">Birthday Surprise <span class="heart">♡</span></span>
+    </a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="about.html"    class="nav-link active">About You</a></li>
+      <li><a href="memories.html" class="nav-link">Memories</a></li>
+      <li><a href="wishes.html"   class="nav-link">Wishes</a></li>
+      <li><a href="surprise.html" class="nav-link surprise-btn">Surprise <span class="heart">♡</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section class="section about-section">
+    <div class="floating-hearts-container" id="floatingHearts"></div>
+
+    <div class="section-header">
+      <p class="section-eyebrow">✨ All About Her ✨</p>
+      <h2 class="section-title">A Little About You <span class="heart">♡</span></h2>
+      <div class="title-divider"><span>🌸</span><span>🌸</span><span>🌸</span></div>
+    </div>
+
+    <div class="about-grid">
+
+      <!-- Photo -->
+      <div class="about-photo-col">
+        <div class="photo-frame glass-card">
+          <div class="photo-inner">
+            <img src="assets/images/sister.jpg" alt="My Beautiful Sister" class="sister-photo"
+              onerror="this.src='https://via.placeholder.com/320x380/1B0B35/B98AFF?text=Your+Photo+Here'"/>
+            <div class="photo-overlay"><span>🌸 My Sister 🌸</span></div>
+          </div>
+          <div class="photo-caption">
+            <p class="photo-name">My Dearest Sister</p>
+            <p class="photo-age">Turning Another Year More Beautiful ✨</p>
+          </div>
+          <div class="about-flower af1">🌸</div>
+          <div class="about-flower af2">🌺</div>
+          <div class="about-flower af3">💜</div>
+          <div class="about-flower af4">🌸</div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="about-text-col">
+        <div class="about-desc glass-card">
+          <p class="about-quote">" You are my sunshine on a cloudy day. "</p>
+
+          <div class="about-trait">
+            <span class="trait-icon">💜</span>
+            <div>
+              <h4>Endlessly Kind</h4>
+              <p>Your heart is a garden where kindness blooms every single day. You give without expecting anything in return, and that makes you extraordinary.</p>
+            </div>
+          </div>
+          <div class="about-trait">
+            <span class="trait-icon">✨</span>
+            <div>
+              <h4>Radiantly Beautiful</h4>
+              <p>Not just on the outside, but deep within your soul. Your smile lights up every room you walk into, and your laughter is pure magic.</p>
+            </div>
+          </div>
+          <div class="about-trait">
+            <span class="trait-icon">🌸</span>
+            <div>
+              <h4>Incredibly Strong</h4>
+              <p>You have faced every storm with grace and emerged stronger, braver, and more beautiful than before. You inspire me every single day.</p>
+            </div>
+          </div>
+          <div class="about-trait">
+            <span class="trait-icon">🌟</span>
+            <div>
+              <h4>My Best Friend</h4>
+              <p>Through every chapter of my life, you have been my constant, my safe place, and my greatest blessing. Having you as my sister is my biggest gift.</p>
+            </div>
+          </div>
+
+          <div class="about-tags">
+            <span class="tag">🌸 Wonderful</span>
+            <span class="tag">💜 Caring</span>
+            <span class="tag">✨ Magical</span>
+            <span class="tag">🌺 Beautiful</span>
+            <span class="tag">💫 Inspiring</span>
+            <span class="tag">🎀 Precious</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page nav -->
+    <div class="page-nav">
+      <a href="index.html"    class="page-nav-btn">← Home</a>
+      <a href="memories.html" class="page-nav-btn">Memories →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-deco"><span>🌸</span><span>💜</span><span>✨</span><span>💜</span><span>🌸</span></div>
+    <p class="footer-line1">Thank you for being in my life...</p>
+    <p class="footer-line2">Stay happy, keep smiling and always shine! <span class="heart">♡</span></p>
+    <p class="footer-credit">Made with 💜 for the most wonderful sister in the world</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

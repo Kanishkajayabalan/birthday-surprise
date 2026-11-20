@@ -1,576 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday ♡ | A Special Surprise</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday ♡ | Home</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       AMBIENT BACKGROUND LAYERS
-  ══════════════════════════════════════════ -->
-  <!-- Dreamy cloud / nebula blobs -->
+  <!-- AMBIENT LAYERS -->
   <div class="nebula-layer" aria-hidden="true">
-    <div class="nebula nb1"></div>
-    <div class="nebula nb2"></div>
-    <div class="nebula nb3"></div>
-    <div class="nebula nb4"></div>
+    <div class="nebula nb1"></div><div class="nebula nb2"></div>
+    <div class="nebula nb3"></div><div class="nebula nb4"></div>
     <div class="nebula nb5"></div>
   </div>
-  <!-- Tiny sparkling dot lights -->
   <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
-  <!-- Ambient glowing orbs (JS-generated) -->
   <div class="bg-particles" id="bgParticles"></div>
-  <!-- Twinkling stars (JS-generated) -->
-  <div class="stars-layer" id="starsLayer"></div>
+  <div class="stars-layer"  id="starsLayer"></div>
 
-  <!-- ══════════════════════════════════════════
-       MUSIC CONTROL
-  ══════════════════════════════════════════ -->
+  <!-- MUSIC -->
   <div class="music-control" id="musicControl" title="Toggle Music">
     <i class="fas fa-music" id="musicIcon"></i>
     <span id="musicLabel">Music</span>
     <audio id="bgMusic" loop>
-      <source src="assets/music/birthday.mp3" type="audio/mpeg" />
+      <source src="assets/music/birthday.mp3" type="audio/mpeg"/>
     </audio>
   </div>
 
-  <!-- ══════════════════════════════════════════
-       NAVIGATION BAR
-  ══════════════════════════════════════════ -->
+  <!-- NAV -->
   <nav class="navbar" id="navbar">
-    <div class="nav-brand">
+    <a class="nav-brand" href="index.html">
       <span class="nav-gift-icon">🎁</span>
       <span class="nav-title">Birthday Surprise <span class="heart">♡</span></span>
-    </div>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
+    </a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home"     class="nav-link active" data-section="home">Home</a></li>
-      <li><a href="#about"    class="nav-link"        data-section="about">About You</a></li>
-      <li><a href="#memories" class="nav-link"        data-section="memories">Memories</a></li>
-      <li><a href="#wishes"   class="nav-link"        data-section="wishes">Wishes</a></li>
-      <li><a href="#surprise" class="nav-link surprise-btn" data-section="surprise">Surprise <span class="heart">♡</span></a></li>
+      <li><a href="index.html"    class="nav-link active">Home</a></li>
+      <li><a href="about.html"    class="nav-link">About You</a></li>
+      <li><a href="memories.html" class="nav-link">Memories</a></li>
+      <li><a href="wishes.html"   class="nav-link">Wishes</a></li>
+      <li><a href="surprise.html" class="nav-link surprise-btn">Surprise <span class="heart">♡</span></a></li>
     </ul>
   </nav>
 
-  <!-- ══════════════════════════════════════════
-       SECTION 1 — HOME
-  ══════════════════════════════════════════ -->
-  <section id="home" class="section home-section">
-
-    <!-- Floating decoration elements -->
+  <!-- HOME SECTION -->
+  <section class="section home-section">
     <div class="floating-hearts-container" id="floatingHearts"></div>
     <div class="butterflies-container"     id="butterflies"></div>
 
     <div class="home-grid">
 
-      <!-- LEFT — Hero text -->
-      <div class="home-left" data-aos="fade-right">
+      <!-- LEFT -->
+      <div class="home-left">
         <p class="home-eyebrow">✨ A Special Day ✨</p>
         <h1 class="hero-surprise">Surprise!</h1>
         <h2 class="hero-birthday">It's Your Birthday!</h2>
         <p class="hero-subtitle">
-          A day to celebrate you, a moment to remind you<br />
+          A day to celebrate you, a moment to remind you<br/>
           how <em>special</em> you truly are. 🌸
         </p>
-        <a href="#surprise" class="cta-btn">
+        <a href="surprise.html" class="cta-btn">
           <span>Open Your Surprise</span>
           <span class="cta-sparkle">✨</span>
         </a>
       </div>
 
-      <!-- CENTER — Cake + Bear illustration -->
-      <div class="home-center" data-aos="fade-up">
+      <!-- CENTER — Cake + Bear -->
+      <div class="home-center">
         <div class="scene-wrapper">
-
-          <!-- Stars around the scene -->
           <div class="scene-star s1">★</div>
           <div class="scene-star s2">✦</div>
           <div class="scene-star s3">★</div>
           <div class="scene-star s4">✦</div>
           <div class="scene-star s5">✶</div>
 
-          <!-- Cake SVG -->
           <div class="cake-wrapper">
             <svg class="cake-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
-              <!-- Plate -->
-              <ellipse cx="100" cy="195" rx="80" ry="12" fill="#6b21a8" opacity="0.4"/>
-              <!-- Bottom tier -->
-              <rect x="25" y="150" width="150" height="45" rx="12" fill="url(#cakeGrad1)"/>
-              <rect x="25" y="148" width="150" height="10" rx="5" fill="#c084fc"/>
-              <!-- Middle tier -->
-              <rect x="42" y="105" width="116" height="48" rx="10" fill="url(#cakeGrad2)"/>
-              <rect x="42" y="103" width="116" height="10" rx="5" fill="#e879f9"/>
-              <!-- Top tier -->
-              <rect x="62" y="68" width="76" height="40" rx="8" fill="url(#cakeGrad3)"/>
-              <rect x="62" y="66" width="76" height="10" rx="4" fill="#f0abfc"/>
-              <!-- Frosting drips bottom -->
-              <path d="M30,155 Q40,165 50,155 Q60,165 70,155 Q80,165 90,155 Q100,165 110,155 Q120,165 130,155 Q140,165 150,155 Q160,165 170,155" stroke="#f5d0fe" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <!-- Frosting drips middle -->
-              <path d="M46,110 Q55,120 65,110 Q75,120 85,110 Q95,120 105,110 Q115,120 125,110 Q135,120 145,110 Q155,120 153,110" stroke="#f0abfc" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <!-- Candles -->
+              <ellipse cx="100" cy="195" rx="80" ry="12" fill="#3a1278" opacity="0.5"/>
+              <rect x="25" y="150" width="150" height="45" rx="12" fill="url(#cg1)"/>
+              <rect x="25" y="148" width="150" height="10" rx="5" fill="#B98AFF"/>
+              <rect x="42" y="105" width="116" height="48" rx="10" fill="url(#cg2)"/>
+              <rect x="42" y="103" width="116" height="10" rx="5" fill="#D4A8FF"/>
+              <rect x="62" y="68"  width="76"  height="40" rx="8"  fill="url(#cg3)"/>
+              <rect x="62" y="66"  width="76"  height="10" rx="4"  fill="#E8D5FF"/>
+              <path d="M30,155 Q40,165 50,155 Q60,165 70,155 Q80,165 90,155 Q100,165 110,155 Q120,165 130,155 Q140,165 150,155 Q160,165 170,155" stroke="#E8D5FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M46,110 Q55,120 65,110 Q75,120 85,110 Q95,120 105,110 Q115,120 125,110 Q135,120 145,110 Q155,120 153,110" stroke="#D4A8FF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
               <rect x="82" y="42" width="8"  height="26" rx="3" fill="#fde68a"/>
-              <rect x="98" y="38" width="8"  height="30" rx="3" fill="#fbcfe8"/>
-              <rect x="114" y="43" width="8" height="25" rx="3" fill="#c4b5fd"/>
-              <!-- Flames -->
+              <rect x="98" y="38" width="8"  height="30" rx="3" fill="#F0B5FF"/>
+              <rect x="114" y="43" width="8" height="25" rx="3" fill="#B98AFF"/>
               <ellipse cx="86"  cy="40" rx="5" ry="7" fill="#fbbf24" class="flame f1"/>
-              <ellipse cx="102" cy="36" rx="5" ry="7" fill="#f472b6" class="flame f2"/>
-              <ellipse cx="118" cy="41" rx="5" ry="7" fill="#a78bfa" class="flame f3"/>
-              <!-- Flame glow -->
-              <ellipse cx="86"  cy="40" rx="8" ry="10" fill="#fbbf24" opacity="0.25" class="flame f1"/>
-              <ellipse cx="102" cy="36" rx="8" ry="10" fill="#f472b6" opacity="0.25" class="flame f2"/>
-              <ellipse cx="118" cy="41" rx="8" ry="10" fill="#a78bfa" opacity="0.25" class="flame f3"/>
-              <!-- Decorative dots -->
-              <circle cx="55"  cy="175" r="4" fill="#f5d0fe"/>
-              <circle cx="75"  cy="168" r="3" fill="#e879f9"/>
-              <circle cx="95"  cy="175" r="4" fill="#f5d0fe"/>
-              <circle cx="115" cy="168" r="3" fill="#e879f9"/>
-              <circle cx="135" cy="175" r="4" fill="#f5d0fe"/>
-              <circle cx="155" cy="168" r="3" fill="#e879f9"/>
-              <!-- Heart topper -->
-              <path d="M97,60 C97,56 92,53 92,58 C92,62 97,66 97,66 C97,66 102,62 102,58 C102,53 97,56 97,60 Z" fill="#f472b6"/>
-              <!-- Gradients -->
+              <ellipse cx="102" cy="36" rx="5" ry="7" fill="#F0B5FF" class="flame f2"/>
+              <ellipse cx="118" cy="41" rx="5" ry="7" fill="#B98AFF" class="flame f3"/>
+              <ellipse cx="86"  cy="40" rx="8" ry="10" fill="#fbbf24" opacity="0.2" class="flame f1"/>
+              <ellipse cx="102" cy="36" rx="8" ry="10" fill="#F0B5FF" opacity="0.2" class="flame f2"/>
+              <ellipse cx="118" cy="41" rx="8" ry="10" fill="#B98AFF" opacity="0.2" class="flame f3"/>
+              <circle cx="55"  cy="175" r="4" fill="#E8D5FF"/>
+              <circle cx="75"  cy="168" r="3" fill="#B98AFF"/>
+              <circle cx="95"  cy="175" r="4" fill="#E8D5FF"/>
+              <circle cx="115" cy="168" r="3" fill="#B98AFF"/>
+              <circle cx="135" cy="175" r="4" fill="#E8D5FF"/>
+              <circle cx="155" cy="168" r="3" fill="#B98AFF"/>
+              <path d="M97,60 C97,56 92,53 92,58 C92,62 97,66 97,66 C97,66 102,62 102,58 C102,53 97,56 97,60 Z" fill="#F0B5FF"/>
               <defs>
-                <linearGradient id="cakeGrad1" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%"   stop-color="#7c3aed"/>
-                  <stop offset="100%" stop-color="#4c1d95"/>
+                <linearGradient id="cg1" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stop-color="#5422A8"/>
+                  <stop offset="100%" stop-color="#2a0d5e"/>
                 </linearGradient>
-                <linearGradient id="cakeGrad2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%"   stop-color="#9333ea"/>
-                  <stop offset="100%" stop-color="#6d28d9"/>
+                <linearGradient id="cg2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stop-color="#6B3BC2"/>
+                  <stop offset="100%" stop-color="#3a1278"/>
                 </linearGradient>
-                <linearGradient id="cakeGrad3" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%"   stop-color="#a855f7"/>
-                  <stop offset="100%" stop-color="#7c3aed"/>
+                <linearGradient id="cg3" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%"   stop-color="#7B4FD4"/>
+                  <stop offset="100%" stop-color="#5422A8"/>
                 </linearGradient>
               </defs>
             </svg>
-            <!-- Glow under cake -->
             <div class="cake-glow"></div>
           </div>
 
-          <!-- Teddy Bear SVG -->
           <div class="bear-wrapper">
             <svg class="bear-svg" viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
-              <!-- Ears -->
-              <circle cx="32" cy="30" r="16" fill="#c084fc"/>
-              <circle cx="88" cy="30" r="16" fill="#c084fc"/>
-              <circle cx="32" cy="30" r="10" fill="#e9d5ff"/>
-              <circle cx="88" cy="30" r="10" fill="#e9d5ff"/>
-              <!-- Head -->
-              <circle cx="60" cy="52" r="34" fill="#c084fc"/>
-              <!-- Face highlight -->
-              <ellipse cx="60" cy="48" rx="22" ry="18" fill="#e9d5ff" opacity="0.5"/>
-              <!-- Eyes -->
-              <circle cx="47" cy="46" r="6" fill="#1e1b4b"/>
-              <circle cx="73" cy="46" r="6" fill="#1e1b4b"/>
+              <circle cx="32" cy="30" r="16" fill="#B98AFF"/>
+              <circle cx="88" cy="30" r="16" fill="#B98AFF"/>
+              <circle cx="32" cy="30" r="10" fill="#E8D5FF"/>
+              <circle cx="88" cy="30" r="10" fill="#E8D5FF"/>
+              <circle cx="60" cy="52" r="34" fill="#B98AFF"/>
+              <ellipse cx="60" cy="48" rx="22" ry="18" fill="#E8D5FF" opacity="0.5"/>
+              <circle cx="47" cy="46" r="6" fill="#1B0B35"/>
+              <circle cx="73" cy="46" r="6" fill="#1B0B35"/>
               <circle cx="49" cy="44" r="2" fill="white"/>
               <circle cx="75" cy="44" r="2" fill="white"/>
-              <!-- Nose -->
-              <ellipse cx="60" cy="58" rx="10" ry="7" fill="#e9d5ff"/>
-              <ellipse cx="60" cy="60" rx="5"  ry="3" fill="#7c3aed"/>
-              <!-- Mouth -->
-              <path d="M53,65 Q60,72 67,65" stroke="#7c3aed" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <!-- Blush -->
-              <ellipse cx="40" cy="62" rx="8" ry="5" fill="#f9a8d4" opacity="0.6"/>
-              <ellipse cx="80" cy="62" rx="8" ry="5" fill="#f9a8d4" opacity="0.6"/>
-              <!-- Body -->
-              <ellipse cx="60" cy="115" rx="30" ry="32" fill="#c084fc"/>
-              <ellipse cx="60" cy="108" rx="20" ry="18" fill="#e9d5ff" opacity="0.6"/>
-              <!-- Arms -->
-              <ellipse cx="22" cy="108" rx="14" ry="22" fill="#c084fc" transform="rotate(-15,22,108)"/>
-              <ellipse cx="98" cy="108" rx="14" ry="22" fill="#c084fc" transform="rotate(15,98,108)"/>
-              <!-- Legs -->
-              <ellipse cx="44" cy="140" rx="13" ry="10" fill="#c084fc"/>
-              <ellipse cx="76" cy="140" rx="13" ry="10" fill="#c084fc"/>
-              <!-- Little heart on tummy -->
-              <path d="M57,110 C57,107 53,105 53,109 C53,112 57,115 57,115 C57,115 61,112 61,109 C61,105 57,107 57,110 Z" fill="#f472b6"/>
-              <!-- Bow -->
-              <path d="M50,86 L60,91 L70,86 L60,82 Z" fill="#f9a8d4"/>
-              <circle cx="60" cy="88" r="4" fill="#f472b6"/>
+              <ellipse cx="60" cy="58" rx="10" ry="7" fill="#E8D5FF"/>
+              <ellipse cx="60" cy="60" rx="5"  ry="3" fill="#5422A8"/>
+              <path d="M53,65 Q60,72 67,65" stroke="#5422A8" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <ellipse cx="40" cy="62" rx="8" ry="5" fill="#F0B5FF" opacity="0.6"/>
+              <ellipse cx="80" cy="62" rx="8" ry="5" fill="#F0B5FF" opacity="0.6"/>
+              <ellipse cx="60" cy="115" rx="30" ry="32" fill="#B98AFF"/>
+              <ellipse cx="60" cy="108" rx="20" ry="18" fill="#E8D5FF" opacity="0.6"/>
+              <ellipse cx="22" cy="108" rx="14" ry="22" fill="#B98AFF" transform="rotate(-15,22,108)"/>
+              <ellipse cx="98" cy="108" rx="14" ry="22" fill="#B98AFF" transform="rotate(15,98,108)"/>
+              <ellipse cx="44" cy="140" rx="13" ry="10" fill="#B98AFF"/>
+              <ellipse cx="76" cy="140" rx="13" ry="10" fill="#B98AFF"/>
+              <path d="M57,110 C57,107 53,105 53,109 C53,112 57,115 57,115 C57,115 61,112 61,109 C61,105 57,107 57,110 Z" fill="#F0B5FF"/>
+              <path d="M50,86 L60,91 L70,86 L60,82 Z" fill="#F0B5FF"/>
+              <circle cx="60" cy="88" r="4" fill="#D4A8FF"/>
             </svg>
           </div>
-
         </div>
       </div>
 
-      <!-- RIGHT — Countdown -->
-      <div class="home-right" data-aos="fade-left">
-        <div class="countdown-card glass-card">
-          <div class="countdown-icon">🌙</div>
-          <h3 class="countdown-title">Countdown to Your<br/><span>Special Day</span> <span class="heart">♡</span></h3>
-          <div class="countdown-grid" id="countdownGrid">
-            <div class="countdown-unit">
-              <span class="count-num" id="cdDays">00</span>
-              <span class="count-label">Days</span>
+      <!-- RIGHT — Nav cards -->
+      <div class="home-right">
+        <div class="home-nav-cards">
+          <a href="about.html" class="home-nav-card glass-card">
+            <span class="hnc-icon">🌸</span>
+            <div>
+              <h3>About You</h3>
+              <p>All about how wonderful you are</p>
             </div>
-            <div class="countdown-sep">:</div>
-            <div class="countdown-unit">
-              <span class="count-num" id="cdHours">00</span>
-              <span class="count-label">Hours</span>
+            <span class="hnc-arrow">→</span>
+          </a>
+          <a href="memories.html" class="home-nav-card glass-card">
+            <span class="hnc-icon">📸</span>
+            <div>
+              <h3>Our Memories</h3>
+              <p>Beautiful moments we've shared</p>
             </div>
-            <div class="countdown-sep">:</div>
-            <div class="countdown-unit">
-              <span class="count-num" id="cdMinutes">00</span>
-              <span class="count-label">Mins</span>
+            <span class="hnc-arrow">→</span>
+          </a>
+          <a href="wishes.html" class="home-nav-card glass-card">
+            <span class="hnc-icon">💌</span>
+            <div>
+              <h3>Birthday Wishes</h3>
+              <p>Words straight from my heart</p>
             </div>
-            <div class="countdown-sep">:</div>
-            <div class="countdown-unit">
-              <span class="count-num" id="cdSeconds">00</span>
-              <span class="count-label">Secs</span>
+            <span class="hnc-arrow">→</span>
+          </a>
+          <a href="surprise.html" class="home-nav-card glass-card surprise-card">
+            <span class="hnc-icon">🎁</span>
+            <div>
+              <h3>Your Surprise</h3>
+              <p>Something special just for you</p>
             </div>
-          </div>
-          <p class="countdown-note" id="countdownNote">Until your magical day! 🌸</p>
-          <div class="countdown-flowers">🌸 🌺 🌸</div>
+            <span class="hnc-arrow">→</span>
+          </a>
         </div>
       </div>
 
     </div><!-- /home-grid -->
-
-    <!-- Scroll indicator -->
-    <div class="scroll-down">
-      <span>Scroll Down</span>
-      <div class="scroll-arrow">↓</div>
-    </div>
-
   </section>
 
-  <!-- ══════════════════════════════════════════
-       SECTION 2 — ABOUT YOU
-  ══════════════════════════════════════════ -->
-  <section id="about" class="section about-section">
-
-    <div class="section-header">
-      <p class="section-eyebrow">✨ All About Her ✨</p>
-      <h2 class="section-title">A Little About You <span class="heart">♡</span></h2>
-      <div class="title-divider"><span>🌸</span><span>🌸</span><span>🌸</span></div>
-    </div>
-
-    <div class="about-grid">
-
-      <!-- Photo card -->
-      <div class="about-photo-col" data-aos="fade-right">
-        <div class="photo-frame glass-card">
-          <div class="photo-inner">
-            <img
-              src="assets/images/sister.jpg"
-              alt="My Beautiful Sister"
-              class="sister-photo"
-              onerror="this.src='https://via.placeholder.com/320x380/4c1d95/e9d5ff?text=Your+Photo+Here'"
-            />
-            <div class="photo-overlay">
-              <span>🌸 My Sister 🌸</span>
-            </div>
-          </div>
-          <div class="photo-caption">
-            <p class="photo-name">My Dearest Sister</p>
-            <p class="photo-age">Turning Another Year More Beautiful ✨</p>
-          </div>
-          <!-- Floating flowers -->
-          <div class="about-flower af1">🌸</div>
-          <div class="about-flower af2">🌺</div>
-          <div class="about-flower af3">💜</div>
-          <div class="about-flower af4">🌸</div>
-        </div>
-      </div>
-
-      <!-- Description -->
-      <div class="about-text-col" data-aos="fade-left">
-        <div class="about-desc glass-card">
-          <p class="about-quote">" You are my sunshine on a cloudy day. "</p>
-
-          <div class="about-trait">
-            <span class="trait-icon">💜</span>
-            <div>
-              <h4>Endlessly Kind</h4>
-              <p>Your heart is a garden where kindness blooms every single day. You give without expecting anything in return, and that makes you extraordinary.</p>
-            </div>
-          </div>
-
-          <div class="about-trait">
-            <span class="trait-icon">✨</span>
-            <div>
-              <h4>Radiantly Beautiful</h4>
-              <p>Not just on the outside, but deep within your soul. Your smile lights up every room you walk into, and your laughter is pure magic.</p>
-            </div>
-          </div>
-
-          <div class="about-trait">
-            <span class="trait-icon">🌸</span>
-            <div>
-              <h4>Incredibly Strong</h4>
-              <p>You have faced every storm with grace and emerged stronger, braver, and more beautiful than before. You inspire me every single day.</p>
-            </div>
-          </div>
-
-          <div class="about-trait">
-            <span class="trait-icon">🌟</span>
-            <div>
-              <h4>My Best Friend</h4>
-              <p>Through every chapter of my life, you have been my constant, my safe place, and my greatest blessing. Having you as my sister is my biggest gift.</p>
-            </div>
-          </div>
-
-          <div class="about-tags">
-            <span class="tag">🌸 Wonderful</span>
-            <span class="tag">💜 Caring</span>
-            <span class="tag">✨ Magical</span>
-            <span class="tag">🌺 Beautiful</span>
-            <span class="tag">💫 Inspiring</span>
-            <span class="tag">🎀 Precious</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 3 — MEMORIES
-  ══════════════════════════════════════════ -->
-  <section id="memories" class="section memories-section">
-
-    <div class="section-header">
-      <p class="section-eyebrow">📸 Captured Moments 📸</p>
-      <h2 class="section-title">Our Beautiful Memories <span class="heart">♡</span></h2>
-      <div class="title-divider"><span>🌸</span><span>🌸</span><span>🌸</span></div>
-      <p class="section-sub">Every picture tells our story — a story full of love, laughter, and magic.</p>
-    </div>
-
-    <div class="polaroid-grid">
-
-      <div class="polaroid" data-aos="zoom-in" data-delay="0">
-        <div class="polaroid-img-wrap">
-          <img src="assets/images/memory1.jpg" alt="Memory 1"
-            onerror="this.src='https://via.placeholder.com/280x220/4c1d95/e9d5ff?text=Memory+1'" />
-          <div class="polaroid-shine"></div>
-        </div>
-        <p class="polaroid-caption">🌸 Our happy place</p>
-      </div>
-
-      <div class="polaroid" data-aos="zoom-in" data-delay="100">
-        <div class="polaroid-img-wrap">
-          <img src="assets/images/memory2.jpg" alt="Memory 2"
-            onerror="this.src='https://via.placeholder.com/280x220/6d28d9/f5d0fe?text=Memory+2'" />
-          <div class="polaroid-shine"></div>
-        </div>
-        <p class="polaroid-caption">✨ Always laughing</p>
-      </div>
-
-      <div class="polaroid" data-aos="zoom-in" data-delay="200">
-        <div class="polaroid-img-wrap">
-          <img src="assets/images/memory3.jpg" alt="Memory 3"
-            onerror="this.src='https://via.placeholder.com/280x220/7c3aed/f0abfc?text=Memory+3'" />
-          <div class="polaroid-shine"></div>
-        </div>
-        <p class="polaroid-caption">💜 Sisters forever</p>
-      </div>
-
-      <div class="polaroid" data-aos="zoom-in" data-delay="300">
-        <div class="polaroid-img-wrap">
-          <img src="assets/images/memory4.jpg" alt="Memory 4"
-            onerror="this.src='https://via.placeholder.com/280x220/9333ea/e9d5ff?text=Memory+4'" />
-          <div class="polaroid-shine"></div>
-        </div>
-        <p class="polaroid-caption">🌺 Best memories</p>
-      </div>
-
-      <div class="polaroid" data-aos="zoom-in" data-delay="400">
-        <div class="polaroid-img-wrap">
-          <img src="assets/images/memory5.jpg" alt="Memory 5"
-            onerror="this.src='https://via.placeholder.com/280x220/a855f7/faf5ff?text=Memory+5'" />
-          <div class="polaroid-shine"></div>
-        </div>
-        <p class="polaroid-caption">🎀 Pure happiness</p>
-      </div>
-
-      <div class="polaroid" data-aos="zoom-in" data-delay="500">
-        <div class="polaroid-img-wrap">
-          <img src="assets/images/memory6.jpg" alt="Memory 6"
-            onerror="this.src='https://via.placeholder.com/280x220/c026d3/fdf4ff?text=Memory+6'" />
-          <div class="polaroid-shine"></div>
-        </div>
-        <p class="polaroid-caption">💫 Magical moments</p>
-      </div>
-
-    </div>
-
-    <!-- Add your own photos note -->
-    <div class="memories-note glass-card">
-      <p>📸 Replace the placeholder images with your real photos by adding files to <code>assets/images/</code> folder! 💜</p>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 4 — WISHES
-  ══════════════════════════════════════════ -->
-  <section id="wishes" class="section wishes-section">
-
-    <div class="wishes-stars" id="wishesStars"></div>
-    <div class="wishes-hearts" id="wishesHearts"></div>
-
-    <div class="section-header">
-      <p class="section-eyebrow">💌 From My Heart to Yours 💌</p>
-      <h2 class="section-title">A Little Wish for You <span class="heart">♡</span></h2>
-      <div class="title-divider"><span>🌸</span><span>🌸</span><span>🌸</span></div>
-    </div>
-
-    <div class="wishes-content">
-
-      <div class="wish-card glass-card main-wish" data-aos="fade-up">
-        <div class="wish-top-deco">✨ 💜 ✨</div>
-        <p class="wish-line big-wish">Happy Birthday,</p>
-        <p class="wish-line wish-name">My Dearest Sister!</p>
-
-        <div class="wish-divider">🌸 🌺 🌸</div>
-
-        <p class="wish-para">
-          On this beautiful day, I want you to know that you are the most precious gift
-          this life has given me. Every memory we've created together, every laugh we've
-          shared, every tear we've wiped for each other — they are my most treasured jewels.
-        </p>
-
-        <p class="wish-para">
-          You deserve a life filled with all the joy you bring to others, all the love you
-          freely give, and all the magic you so effortlessly create. May every dream you
-          carry in your beautiful heart come true this year and every year after.
-        </p>
-
-        <p class="wish-para">
-          I am so incredibly lucky to call you my sister. No distance, no time, nothing
-          in this world could ever change how deeply I love you. You are my person, my
-          home, my forever best friend.
-        </p>
-
-        <div class="wish-divider">🌸 🌺 🌸</div>
-
-        <p class="wish-closing">
-          With all my love,<br/>
-          <span class="wish-sign">Your Sibling ♡</span>
-        </p>
-        <div class="wish-bottom-deco">💫 🌟 💫</div>
-      </div>
-
-      <!-- Mini wish cards -->
-      <div class="mini-wishes">
-        <div class="mini-wish glass-card" data-aos="zoom-in">
-          <span class="mini-wish-icon">🌸</span>
-          <p>May your year bloom with happiness, like flowers in spring.</p>
-        </div>
-        <div class="mini-wish glass-card" data-aos="zoom-in">
-          <span class="mini-wish-icon">✨</span>
-          <p>May every star in the sky bring you something magical.</p>
-        </div>
-        <div class="mini-wish glass-card" data-aos="zoom-in">
-          <span class="mini-wish-icon">💜</span>
-          <p>May love surround you today and always, in every way.</p>
-        </div>
-        <div class="mini-wish glass-card" data-aos="zoom-in">
-          <span class="mini-wish-icon">🎂</span>
-          <p>May this birthday be the beginning of your most beautiful chapter.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 5 — SURPRISE
-  ══════════════════════════════════════════ -->
-  <section id="surprise" class="section surprise-section">
-
-    <div class="confetti-container" id="confettiContainer"></div>
-    <div class="fireworks-container" id="fireworksContainer"></div>
-
-    <div class="section-header">
-      <p class="section-eyebrow">🎁 Something Special 🎁</p>
-      <h2 class="section-title">Your Special Surprise <span class="heart">♡</span></h2>
-      <div class="title-divider"><span>🌸</span><span>🌸</span><span>🌸</span></div>
-    </div>
-
-    <div class="surprise-content">
-
-      <!-- Gift Box -->
-      <div class="gift-area" id="giftArea">
-        <div class="gift-box" id="giftBox">
-          <!-- Gift lid -->
-          <div class="gift-lid" id="giftLid">
-            <div class="gift-lid-body"></div>
-            <div class="gift-bow">
-              <div class="bow-left"></div>
-              <div class="bow-right"></div>
-              <div class="bow-center"></div>
-            </div>
-          </div>
-          <!-- Gift base -->
-          <div class="gift-base">
-            <div class="gift-ribbon-v"></div>
-          </div>
-          <!-- Sparkles on gift -->
-          <div class="gift-sparkle gs1">✦</div>
-          <div class="gift-sparkle gs2">★</div>
-          <div class="gift-sparkle gs3">✦</div>
-          <div class="gift-sparkle gs4">✶</div>
-        </div>
-
-        <button class="open-gift-btn" id="openGiftBtn">
-          <span>Open Your Gift</span> 🎁
-        </button>
-      </div>
-
-      <!-- Revealed message (hidden initially) -->
-      <div class="gift-reveal" id="giftReveal">
-        <div class="reveal-card glass-card">
-          <div class="reveal-top">🎉 ✨ 🎊</div>
-          <h3 class="reveal-title">From My Heart to Yours!</h3>
-          <div class="reveal-hearts">
-            <span class="rh rh1">💜</span>
-            <span class="rh rh2">💜</span>
-            <span class="rh rh3">💜</span>
-            <span class="rh rh4">💜</span>
-            <span class="rh rh5">💜</span>
-          </div>
-          <p class="reveal-message">
-            This isn't just a website — it's a piece of my heart, crafted especially for
-            you. Every word, every color, every star on this page was placed there with
-            love, thinking of you, your smile, and how much joy you bring to my life.
-          </p>
-          <p class="reveal-message">
-            Your gift is simply this: knowing that someone in this world loves you
-            unconditionally, is endlessly proud of you, and wishes you nothing but
-            the most beautiful, most magical life. 🌸
-          </p>
-          <p class="reveal-closing">
-            I love you to the moon and back,<br/>
-            <strong>forever and always. 💜</strong>
-          </p>
-          <div class="reveal-flowers">🌸 🌺 🌸 🌺 🌸</div>
-          <button class="replay-btn" id="replayBtn">🎊 Celebrate Again!</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-deco">
-      <span>🌸</span><span>💜</span><span>✨</span><span>💜</span><span>🌸</span>
-    </div>
+    <div class="footer-deco"><span>🌸</span><span>💜</span><span>✨</span><span>💜</span><span>🌸</span></div>
     <p class="footer-line1">Thank you for being in my life...</p>
     <p class="footer-line2">Stay happy, keep smiling and always shine! <span class="heart">♡</span></p>
-    <div class="footer-stars">
-      <span>★</span><span>✦</span><span>★</span><span>✦</span><span>★</span>
-    </div>
+    <div class="footer-stars"><span>★</span><span>✦</span><span>★</span><span>✦</span><span>★</span></div>
     <p class="footer-credit">Made with 💜 for the most wonderful sister in the world</p>
   </footer>
 

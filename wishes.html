@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Wishes ♡ | Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- AMBIENT LAYERS -->
+  <div class="nebula-layer" aria-hidden="true">
+    <div class="nebula nb1"></div><div class="nebula nb2"></div>
+    <div class="nebula nb3"></div><div class="nebula nb4"></div>
+    <div class="nebula nb5"></div>
+  </div>
+  <div class="sparkle-layer" id="sparkleLayer" aria-hidden="true"></div>
+  <div class="bg-particles" id="bgParticles"></div>
+  <div class="stars-layer"  id="starsLayer"></div>
+
+  <!-- MUSIC -->
+  <div class="music-control" id="musicControl" title="Toggle Music">
+    <i class="fas fa-music" id="musicIcon"></i>
+    <span id="musicLabel">Music</span>
+    <audio id="bgMusic" loop>
+      <source src="assets/music/birthday.mp3" type="audio/mpeg"/>
+    </audio>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <a class="nav-brand" href="index.html">
+      <span class="nav-gift-icon">🎁</span>
+      <span class="nav-title">Birthday Surprise <span class="heart">♡</span></span>
+    </a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="about.html"    class="nav-link">About You</a></li>
+      <li><a href="memories.html" class="nav-link">Memories</a></li>
+      <li><a href="wishes.html"   class="nav-link active">Wishes</a></li>
+      <li><a href="surprise.html" class="nav-link surprise-btn">Surprise <span class="heart">♡</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- WISHES SECTION -->
+  <section class="section wishes-section">
+    <div class="wishes-stars"  id="wishesStars"></div>
+    <div class="wishes-hearts" id="wishesHearts"></div>
+    <div class="floating-hearts-container" id="floatingHearts"></div>
+
+    <div class="section-header">
+      <p class="section-eyebrow">💌 From My Heart to Yours 💌</p>
+      <h2 class="section-title">A Little Wish for You <span class="heart">♡</span></h2>
+      <div class="title-divider"><span>🌸</span><span>🌸</span><span>🌸</span></div>
+    </div>
+
+    <div class="wishes-content">
+
+      <div class="wish-card glass-card main-wish">
+        <div class="wish-top-deco">✨ 💜 ✨</div>
+        <p class="wish-line big-wish">Happy Birthday,</p>
+        <p class="wish-line wish-name">My Dearest Sister!</p>
+        <div class="wish-divider">🌸 🌺 🌸</div>
+        <p class="wish-para">
+          On this beautiful day, I want you to know that you are the most precious gift
+          this life has given me. Every memory we've created together, every laugh we've
+          shared, every tear we've wiped for each other — they are my most treasured jewels.
+        </p>
+        <p class="wish-para">
+          You deserve a life filled with all the joy you bring to others, all the love you
+          freely give, and all the magic you so effortlessly create. May every dream you
+          carry in your beautiful heart come true this year and every year after.
+        </p>
+        <p class="wish-para">
+          I am so incredibly lucky to call you my sister. No distance, no time, nothing
+          in this world could ever change how deeply I love you. You are my person, my
+          home, my forever best friend.
+        </p>
+        <div class="wish-divider">🌸 🌺 🌸</div>
+        <p class="wish-closing">
+          With all my love,<br/>
+          <span class="wish-sign">Your Sibling ♡</span>
+        </p>
+        <div class="wish-bottom-deco">💫 🌟 💫</div>
+      </div>
+
+      <div class="mini-wishes">
+        <div class="mini-wish glass-card">
+          <span class="mini-wish-icon">🌸</span>
+          <p>May your year bloom with happiness, like flowers in spring.</p>
+        </div>
+        <div class="mini-wish glass-card">
+          <span class="mini-wish-icon">✨</span>
+          <p>May every star in the sky bring you something magical.</p>
+        </div>
+        <div class="mini-wish glass-card">
+          <span class="mini-wish-icon">💜</span>
+          <p>May love surround you today and always, in every way.</p>
+        </div>
+        <div class="mini-wish glass-card">
+          <span class="mini-wish-icon">🎂</span>
+          <p>May this birthday be the beginning of your most beautiful chapter.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Page nav -->
+    <div class="page-nav">
+      <a href="memories.html" class="page-nav-btn">← Memories</a>
+      <a href="surprise.html" class="page-nav-btn">Surprise →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-deco"><span>🌸</span><span>💜</span><span>✨</span><span>💜</span><span>🌸</span></div>
+    <p class="footer-line1">Thank you for being in my life...</p>
+    <p class="footer-line2">Stay happy, keep smiling and always shine! <span class="heart">♡</span></p>
+    <p class="footer-credit">Made with 💜 for the most wonderful sister in the world</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
