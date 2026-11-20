@@ -16,6 +16,7 @@ if (BIRTHDAY < new Date()) BIRTHDAY.setFullYear(BIRTHDAY.getFullYear() + 1);
 ══════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
   initStarField();
+  initSparkleLayer();
   initFloatingHearts();
   initButterflies();
   initCountdown();
@@ -37,7 +38,7 @@ function initStarField() {
   for (let i = 0; i < count; i++) {
     const star = document.createElement('div');
     star.className = 'star-dot';
-    const size = Math.random() * 2.5 + 0.5;
+    const size = Math.random() * 2.2 + 0.4;
     const x    = Math.random() * 100;
     const y    = Math.random() * 100;
     const dur  = Math.random() * 4 + 2;
@@ -47,12 +48,12 @@ function initStarField() {
       width:${size}px; height:${size}px;
       animation-duration:${dur}s;
       animation-delay:${del}s;
-      opacity:${Math.random() * 0.6 + 0.1};
+      opacity:${Math.random() * 0.5 + 0.05};
     `;
     layer.appendChild(star);
   }
 
-  // Also add a few emoji stars scattered
+  // Emoji stars
   const emojiStars = ['✦','★','✶','✸','✵'];
   for (let i = 0; i < 20; i++) {
     const el = document.createElement('div');
@@ -61,11 +62,58 @@ function initStarField() {
       left:${Math.random()*100}%;
       top:${Math.random()*100}%;
       font-size:${Math.random()*0.6+0.5}rem;
-      color:rgba(233,213,255,${Math.random()*0.3+0.1});
+      color:rgba(185,138,255,${Math.random()*0.25+0.08});
       animation:starTwinkle ${Math.random()*3+2}s ease-in-out ${Math.random()*4}s infinite;
       pointer-events:none;
     `;
     el.textContent = emojiStars[Math.floor(Math.random() * emojiStars.length)];
+    layer.appendChild(el);
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   2b. SPARKLE LAYER — tiny glowing dot lights
+══════════════════════════════════════════════════════ */
+function initSparkleLayer() {
+  const layer = document.getElementById('sparkleLayer');
+  if (!layer) return;
+
+  // Dot sparkles
+  const dotColors = [
+    'rgba(185,138,255,0.9)',
+    'rgba(240,181,255,0.85)',
+    'rgba(255,255,255,0.90)',
+    'rgba(212,168,255,0.85)',
+  ];
+  for (let i = 0; i < 90; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'sparkle-dot';
+    const size = Math.random() * 2.5 + 1;
+    const color = dotColors[Math.floor(Math.random() * dotColors.length)];
+    dot.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      width:${size}px; height:${size}px;
+      background:${color};
+      animation-duration:${Math.random()*3+2}s;
+      animation-delay:${Math.random()*6}s;
+    `;
+    layer.appendChild(dot);
+  }
+
+  // Cross sparkles ✦
+  const crosses = ['✦','✧','✶','✷','✸'];
+  for (let i = 0; i < 40; i++) {
+    const el = document.createElement('div');
+    el.className = 'sparkle-cross';
+    el.textContent = crosses[Math.floor(Math.random() * crosses.length)];
+    el.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      font-size:${Math.random()*0.5+0.5}rem;
+      animation-duration:${Math.random()*3+2}s;
+      animation-delay:${Math.random()*8}s;
+    `;
     layer.appendChild(el);
   }
 }
@@ -493,8 +541,8 @@ function launchConfetti() {
   if (!container) return;
 
   const colors = [
-    '#a855f7','#c084fc','#e879f9','#f472b6','#f9a8d4',
-    '#fbbf24','#34d399','#60a5fa','#ffffff','#fde68a'
+    '#5422A8','#7B4FD4','#B98AFF','#D4A8FF','#F0B5FF',
+    '#E8D5FF','#9B6FE0','#C4A0FF','#ffffff','#F5DCFF'
   ];
   const shapes = ['circle', 'rect'];
 
@@ -533,7 +581,7 @@ function launchFireworks() {
   const container = document.getElementById('fireworksContainer');
   if (!container) return;
 
-  const colors = ['#a855f7','#f472b6','#fbbf24','#34d399','#60a5fa','#e879f9'];
+  const colors = ['#5422A8','#B98AFF','#F0B5FF','#E8D5FF','#7B4FD4','#D4A8FF'];
 
   for (let i = 0; i < 8; i++) {
     setTimeout(() => {
@@ -672,11 +720,12 @@ function initMusicControl() {
   if (!container) return;
 
   const orbs = [
-    { x: 15, y: 20, size: 300, color: 'rgba(109,40,217,0.12)', dur: 18 },
-    { x: 75, y: 60, size: 400, color: 'rgba(168,85,247,0.08)', dur: 22 },
-    { x: 50, y: 85, size: 250, color: 'rgba(192,132,252,0.10)', dur: 15 },
-    { x: 85, y: 15, size: 200, color: 'rgba(244,114,182,0.08)', dur: 20 },
-    { x: 25, y: 70, size: 350, color: 'rgba(76,29,149,0.15)',  dur: 25 },
+    { x: 15, y: 20, size: 320, color: 'rgba(84,34,168,0.14)',   dur: 18 },
+    { x: 75, y: 60, size: 420, color: 'rgba(185,138,255,0.07)', dur: 22 },
+    { x: 50, y: 85, size: 260, color: 'rgba(185,138,255,0.09)', dur: 15 },
+    { x: 85, y: 15, size: 210, color: 'rgba(240,181,255,0.07)', dur: 20 },
+    { x: 25, y: 70, size: 370, color: 'rgba(27,11,53,0.18)',    dur: 25 },
+    { x: 60, y: 35, size: 280, color: 'rgba(84,34,168,0.10)',   dur: 19 },
   ];
 
   orbs.forEach((orb, i) => {
@@ -740,8 +789,8 @@ window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   if (navbar) {
     if (window.scrollY > 10) {
-      navbar.style.background = 'rgba(13,3,32,0.95)';
-      navbar.style.boxShadow  = '0 2px 40px rgba(76,29,149,0.6)';
+      navbar.style.background = 'rgba(8,8,23,0.97)';
+      navbar.style.boxShadow  = '0 2px 40px rgba(84,34,168,0.55)';
     } else {
       navbar.style.background = '';
       navbar.style.boxShadow  = '';
